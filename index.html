@@ -7,27 +7,30 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Typed.js for hero typing -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+  <meta name="theme-color" content="#0b1220" />
   <style>
+    /* subtle glass effect */
     .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
     .skill-bar { width: 0; transition: width 1200ms ease; }
     .card-fade { transform: translateY(10px); opacity: 0; transition: all 600ms ease; }
     .card-fade.visible { transform: translateY(0); opacity: 1; }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white antialiased">
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white antialiased selection:bg-yellow-500/30">
 
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 glass border-b border-gray-700">
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 glass border-b border-gray-800/60">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-full overflow-hidden">
+        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden ring-1 ring-gray-700">
           <img src="profile.png" alt="Mohd Fardeen Baig">
         </div>
-        <div>
-          <div class="text-lg font-semibold">Mohd Fardeen Baig</div>
-          <div class="text-xs text-gray-300">Data Associate · Ealkay Consulting Pvt Ltd</div>
+        <div class="min-w-0">
+          <div class="text-base md:text-lg font-semibold truncate">Mohd Fardeen Baig</div>
+          <div class="text-[11px] md:text-xs text-gray-300">Data Associate · Ealkay Consulting Pvt Ltd</div>
         </div>
       </div>
 
@@ -37,7 +40,7 @@
         <a href="#projects" class="hover:text-yellow-400">Projects</a>
         <a href="#experience" class="hover:text-yellow-400">Experience</a>
         <a href="#contact" class="hover:text-yellow-400">Contact</a>
-        <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" class="ml-2 px-3 py-1 border border-yellow-500 rounded hover:bg-yellow-500 text-yellow-300" target="_blank">Resume</a>
+        <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" class="ml-2 px-3 py-1 border border-yellow-500 rounded hover:bg-yellow-500 text-yellow-300" target="_blank" rel="noopener">Resume</a>
       </nav>
 
       <div class="md:hidden">
@@ -47,32 +50,32 @@
   </header>
 
   <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
-    <div class="flex-1">
-      <div class="rounded-2xl p-1 bg-gradient-to-r from-blue-500 to-purple-600 inline-block shadow-xl w-full">
-        <div class="bg-gray-900 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-          <img src="profile.png" alt="photo" class="w-28 h-28 md:w-36 md:h-36 rounded-xl object-cover border-2 border-gray-800 shadow-lg mb-4 md:mb-0">
-          <div>
-            <h1 class="text-2xl md:text-4xl font-extrabold">Hi, I'm <span class="text-yellow-400">Mohd Fardeen</span></h1>
+  <section class="max-w-6xl mx-auto px-6 py-10 md:py-16 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-10">
+    <div class="flex-1 w-full">
+      <div class="rounded-2xl p-[1px] bg-gradient-to-r from-blue-500 to-purple-600 inline-block shadow-xl w-full">
+        <div class="bg-gray-900 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+          <img src="profile.png" alt="photo" class="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl object-cover border-2 border-gray-800 shadow-lg mb-2 md:mb-0">
+          <div class="w-full">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">Hi, I'm <span class="text-yellow-400">Mohd Fardeen</span></h1>
             <p class="mt-2 text-gray-300 text-sm md:text-base">
               Data Associate who turns messy numbers into meaningful dashboards and decisions. I build Power BI solutions, write SQL, and automate ETL pipelines.
             </p>
-            <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <div class="mt-4 flex flex-col sm:flex-row gap-3 w-full">
               <a href="#projects" class="px-4 py-2 bg-yellow-500 text-black rounded-lg font-semibold shadow hover:scale-105 transform transition text-center">View Projects</a>
               <a href="#contact" class="px-4 py-2 border border-gray-700 rounded-lg text-gray-200 hover:bg-gray-800 text-center">Get in touch</a>
-              <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-600 text-yellow-300 hover:bg-yellow-600 text-center">Download CV</a>
+              <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-yellow-600 text-yellow-300 hover:bg-yellow-600 text-center">Download CV</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-6 text-gray-300 text-sm md:text-base">
+      <div class="mt-4 text-gray-300 text-sm md:text-base">
         <span>Role: </span>
         <span id="typed" class="font-medium text-yellow-400"></span>
       </div>
     </div>
 
     <!-- Side Info -->
-    <aside class="w-full md:w-96 grid sm:grid-cols-2 gap-4">
+    <aside class="w-full md:w-96 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div class="card-fade glass p-4 rounded-2xl shadow text-sm">
         <div class="text-xs text-gray-300">Experience</div>
         <div class="font-bold">Data Associate</div>
@@ -82,20 +85,20 @@
         <div class="text-xs text-gray-300">Location</div>
         <div class="font-bold">Hyderabad, India</div>
       </div>
-      <div class="card-fade glass p-4 rounded-2xl shadow text-sm break-words">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm break-words hyphens-auto">
         <div class="text-xs text-gray-300">Contact</div>
-        <div class="font-semibold text-sm">+91 79935 23663</div>
-        <div class="text-xs text-gray-400 break-words">mohdfardeenbaig@gmail.com</div>
+        <a href="tel:+917993523663" class="font-semibold text-sm block">+91 79935 23663</a>
+        <a href="mailto:mohdfardeenbaig@gmail.com" class="text-xs text-gray-400 break-words hyphens-auto">mohdfardeenbaig@gmail.com</a>
       </div>
-      <div class="card-fade glass p-4 rounded-2xl shadow text-sm break-words">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm">
         <div class="text-xs text-gray-300">Top Skills</div>
-        <div class="font-semibold text-sm leading-snug">Power BI, SQL, Excel, Looker Studio, ETL</div>
+        <div class="font-semibold text-sm leading-snug break-words">Power BI, SQL, Excel, Looker Studio, ETL</div>
       </div>
     </aside>
   </section>
 
   <!-- About + Skills -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
+  <section id="about" class="max-w-6xl mx-auto px-6 py-10 md:py-12 grid md:grid-cols-2 gap-8">
     <div class="glass p-6 rounded-2xl shadow-lg card-fade">
       <h2 class="text-2xl font-bold mb-3">About Me</h2>
       <p class="text-gray-300 text-sm md:text-base leading-relaxed">
@@ -140,15 +143,120 @@
     </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
+    <h2 class="text-3xl font-bold mb-6">Projects</h2>
+
+    <!-- 3-up grid on desktop, 2 on tablets, 1 on mobile -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Project 1 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">MIS Power BI Dashboards</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Interactive MIS suite combining finance, SEO and ops sources. KPI cards, drill-through, dynamic filters, role-level security.
+        </p>
+        <ul class="mt-3 text-xs text-gray-400 space-y-1">
+          <li>• Power BI · DAX · SQL</li>
+          <li>• Reduced manual reporting time by 70%</li>
+        </ul>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">MIS Application</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Lightweight internal tool to streamline data entry and automate report refreshes across departments.
+        </p>
+        <ul class="mt-3 text-xs text-gray-400 space-y-1">
+          <li>• Power BI Service · Gateways</li>
+          <li>• Error rate down ~40%</li>
+        </ul>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">Sales Performance Dashboard</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Region-wise KPIs, YoY growth, segmentation and forecast visuals with DAX measures.
+        </p>
+        <div class="mt-3 text-xs text-gray-400">Power BI · SQL · DAX</div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">SEO & GA4 Reporting</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Consolidated Looker Studio report merging GA4 & Search Console for conversions and content funnels.
+        </p>
+        <div class="mt-3 text-xs text-gray-400">Looker Studio · GA4</div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">ETL Data Pipeline</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Talend jobs to ingest, clean and schedule incremental loads for reporting pipelines.
+        </p>
+        <div class="mt-3 text-xs text-gray-400">Talend · SQL</div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="glass p-6 rounded-2xl shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">Ad-hoc Analytics</h3>
+        <p class="mt-2 text-gray-300 text-sm">
+          Built quick SQL notebooks for churn, cohort and retention analysis to assist leadership decisions.
+        </p>
+        <div class="mt-3 text-xs text-gray-400">SQL · Excel</div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
+    <h2 class="text-3xl font-bold mb-6">Experience</h2>
+    <div class="space-y-6">
+      <div class="glass p-5 rounded-2xl shadow-lg flex gap-4 items-start">
+        <div class="w-3 h-3 rounded-full bg-yellow-400 mt-2"></div>
+        <div>
+          <div class="font-semibold">Data Associate — Ealkay Consulting Pvt Ltd</div>
+          <div class="text-xs text-gray-400">Jan 2025 — Present</div>
+          <p class="mt-2 text-gray-300 text-sm">Working on Power BI dashboards, SQL development, ETL processes and cross-team collaboration to deliver MIS and analytics solutions.</p>
+        </div>
+      </div>
+      <div class="glass p-5 rounded-2xl shadow-lg flex gap-4 items-start">
+        <div class="w-3 h-3 rounded-full bg-gray-400 mt-2"></div>
+        <div>
+          <div class="font-semibold">Data Analyst Intern — Ealkay Consulting</div>
+          <div class="text-xs text-gray-400">3 months</div>
+          <p class="mt-2 text-gray-300 text-sm">Built dashboards, automated reports, and supported ETL tasks for client reporting needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-10 md:py-12">
     <h2 class="text-3xl font-bold mb-6">Let's connect</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="glass p-6 rounded-2xl shadow-lg text-sm">
         <h3 class="font-semibold mb-2">Contact Info</h3>
-        <p>Email: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400 break-words">mohdfardeenbaig@gmail.com</a></p>
-        <p>Phone: <a href="tel:+917993523663" class="text-yellow-400">+91 79935 23663</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a" target="_blank" class="text-yellow-400 break-words">mohd-fardeen-baig-4ba38028a</a></p>
+        <p class="text-gray-300 break-words">Email:
+          <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400 break-words hyphens-auto">mohdfardeenbaig@gmail.com</a>
+        </p>
+        <p class="text-gray-300">Phone:
+          <a href="tel:+917993523663" class="text-yellow-400">+91 79935 23663</a>
+        </p>
+        <p class="text-gray-300 break-words">LinkedIn:
+          <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a"
+             target="_blank" rel="noopener"
+             class="text-yellow-400 break-words hyphens-auto">mohd-fardeen-baig-4ba38028a</a>
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="mailto:mohdfardeenbaig@gmail.com" class="px-4 py-2 bg-yellow-500 text-black rounded shadow text-center">Email me</a>
+          <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a" target="_blank" rel="noopener" class="px-4 py-2 border border-gray-700 rounded text-center">LinkedIn</a>
+        </div>
       </div>
 
       <form class="glass p-6 rounded-2xl shadow-lg text-sm" id="contactForm">
@@ -161,7 +269,9 @@
         <textarea id="message" rows="4" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700 text-sm" required></textarea>
         <div class="mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <button type="submit" class="px-4 py-2 bg-yellow-500 text-black rounded font-semibold shadow w-full sm:w-auto">Send</button>
-          <div class="text-xs text-gray-400 break-words">Or email directly: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400">mohdfardeenbaig@gmail.com</a></div>
+          <div class="text-xs text-gray-400 break-words">Or email directly:
+            <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400 break-words hyphens-auto">mohdfardeenbaig@gmail.com</a>
+          </div>
         </div>
       </form>
     </div>
@@ -171,16 +281,22 @@
     Designed & maintained by <strong class="text-white">Mohd Fardeen Baig</strong> — Data Associate · © 2025
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // hero typing
     new Typed('#typed', {
       strings: ['Data Associate @ Ealkay Consulting', 'Power BI | SQL | ETL', 'Turning Data into Insights'],
       typeSpeed: 45, backSpeed: 30, backDelay: 2000, startDelay: 500, loop: true
     });
+
+    // reveal on scroll
     const fadeEls = document.querySelectorAll('.card-fade');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     fadeEls.forEach(el => io.observe(el));
+
+    // animate skill bars when visible
     const skillsSection = document.getElementById('skills');
     const skillBars = document.querySelectorAll('.skill-bar');
     const skillObserver = new IntersectionObserver((entries) => {
@@ -195,6 +311,8 @@
       });
     }, { threshold: 0.25 });
     if (skillsSection) skillObserver.observe(skillsSection);
+
+    // contact form -> mailto
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = encodeURIComponent(document.getElementById('name').value.trim());
