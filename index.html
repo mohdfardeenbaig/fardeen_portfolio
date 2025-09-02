@@ -2,21 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohd Fardeen Baig — Data Associate</title>
 
-  <!-- Tailwind CDN (no build) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Typed.js for hero typing -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
-    /* small custom extras */
-    .glass {
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(6px);
-    }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
     .skill-bar { width: 0; transition: width 1200ms ease; }
     .card-fade { transform: translateY(10px); opacity: 0; transition: all 600ms ease; }
     .card-fade.visible { transform: translateY(0); opacity: 1; }
@@ -24,7 +18,7 @@
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white antialiased">
 
-  <!-- Header / Navbar -->
+  <!-- Navbar -->
   <header class="sticky top-0 z-50 glass border-b border-gray-700">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <div class="flex items-center gap-3">
@@ -53,52 +47,49 @@
   </header>
 
   <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
+  <section class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
     <div class="flex-1">
-      <div class="rounded-2xl p-1 bg-gradient-to-r from-blue-500 to-purple-600 inline-block shadow-xl">
-        <div class="bg-gray-900 rounded-2xl p-8 flex items-center gap-6">
-          <img src="profile.png" alt="photo" class="w-36 h-36 rounded-xl object-cover border-2 border-gray-800 shadow-lg">
+      <div class="rounded-2xl p-1 bg-gradient-to-r from-blue-500 to-purple-600 inline-block shadow-xl w-full">
+        <div class="bg-gray-900 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+          <img src="profile.png" alt="photo" class="w-28 h-28 md:w-36 md:h-36 rounded-xl object-cover border-2 border-gray-800 shadow-lg mb-4 md:mb-0">
           <div>
-            <h1 class="text-3xl md:text-4xl font-extrabold">Hi, I'm <span class="text-yellow-400">Mohd Fardeen</span></h1>
-            <p class="mt-2 text-gray-300 max-w-xl">
+            <h1 class="text-2xl md:text-4xl font-extrabold">Hi, I'm <span class="text-yellow-400">Mohd Fardeen</span></h1>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">
               Data Associate who turns messy numbers into meaningful dashboards and decisions. I build Power BI solutions, write SQL, and automate ETL pipelines.
             </p>
-
-            <div class="mt-4 flex gap-3">
-              <a href="#projects" class="px-4 py-2 bg-yellow-500 text-black rounded-lg font-semibold shadow hover:scale-105 transform transition">View Projects</a>
-              <a href="#contact" class="px-4 py-2 border border-gray-700 rounded-lg text-gray-200 hover:bg-gray-800">Get in touch</a>
-              <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-600 text-yellow-300 hover:bg-yellow-600">Download CV</a>
+            <div class="mt-4 flex flex-col sm:flex-row gap-3">
+              <a href="#projects" class="px-4 py-2 bg-yellow-500 text-black rounded-lg font-semibold shadow hover:scale-105 transform transition text-center">View Projects</a>
+              <a href="#contact" class="px-4 py-2 border border-gray-700 rounded-lg text-gray-200 hover:bg-gray-800 text-center">Get in touch</a>
+              <a href="Mohd_Fardeen_Baig_(Data_Analyst).pdf" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-600 text-yellow-300 hover:bg-yellow-600 text-center">Download CV</a>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="mt-6 text-gray-300">
-        <span class="text-sm">Role: </span>
+      <div class="mt-6 text-gray-300 text-sm md:text-base">
+        <span>Role: </span>
         <span id="typed" class="font-medium text-yellow-400"></span>
       </div>
     </div>
 
-    <aside class="w-full md:w-96 grid grid-cols-2 gap-4">
-      <div class="card-fade glass p-4 rounded-2xl shadow">
+    <!-- Side Info -->
+    <aside class="w-full md:w-96 grid sm:grid-cols-2 gap-4">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm">
         <div class="text-xs text-gray-300">Experience</div>
-        <div class="text-xl font-bold">Data Associate</div>
+        <div class="font-bold">Data Associate</div>
         <div class="text-xs text-gray-400">Ealkay Consulting PVT LTD</div>
       </div>
-      <div class="card-fade glass p-4 rounded-2xl shadow">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm">
         <div class="text-xs text-gray-300">Location</div>
-        <div class="text-xl font-bold">Hyderabad, India</div>
-        
+        <div class="font-bold">Hyderabad, India</div>
       </div>
-      <div class="card-fade glass p-4 rounded-2xl shadow">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm break-words">
         <div class="text-xs text-gray-300">Contact</div>
-        <div class="text-lg font-semibold">+91 79935 23663</div>
-        <div class="text-xs text-gray-400">mohdfardeenbaig@gmail.com</div>
+        <div class="font-semibold text-sm">+91 79935 23663</div>
+        <div class="text-xs text-gray-400 break-words">mohdfardeenbaig@gmail.com</div>
       </div>
-      <div class="card-fade glass p-4 rounded-2xl shadow">
+      <div class="card-fade glass p-4 rounded-2xl shadow text-sm break-words">
         <div class="text-xs text-gray-300">Top Skills</div>
-        <div class="text-lg font-semibold">Power BI, SQL, Excel, looker Studio, ETL</div>
-       
+        <div class="font-semibold text-sm leading-snug">Power BI, SQL, Excel, Looker Studio, ETL</div>
       </div>
     </aside>
   </section>
@@ -107,10 +98,10 @@
   <section id="about" class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
     <div class="glass p-6 rounded-2xl shadow-lg card-fade">
       <h2 class="text-2xl font-bold mb-3">About Me</h2>
-      <p class="text-gray-300 leading-relaxed">
+      <p class="text-gray-300 text-sm md:text-base leading-relaxed">
         I'm a Data Associate with hands-on experience building dashboards and automating reports. I enjoy solving business problems with data — ETL, SQL, Power BI visualizations, and clear storytelling.
       </p>
-      <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-300">
+      <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
         <li>📌 B.Tech — Electronics & Communications</li>
         <li>📌 SQL Certification — Durga Soft</li>
         <li>📌 Internship — Ealkay Consulting</li>
@@ -122,89 +113,28 @@
       <h2 class="text-2xl font-bold mb-3">Skills & Proficiency</h2>
       <div class="mt-4 space-y-4">
         <div>
-          <div class="flex justify-between text-sm"><span>Power BI</span><span class="text-gray-300">90%</span></div>
+          <div class="flex justify-between text-xs md:text-sm"><span>Power BI</span><span>90%</span></div>
           <div class="w-full bg-gray-700 rounded-full h-3 mt-2 overflow-hidden">
             <div class="skill-bar bg-gradient-to-r from-blue-400 to-indigo-600 h-3 rounded-full" data-fill="90%"></div>
           </div>
         </div>
         <div>
-          <div class="flex justify-between text-sm"><span>SQL</span><span class="text-gray-300">85%</span></div>
+          <div class="flex justify-between text-xs md:text-sm"><span>SQL</span><span>85%</span></div>
           <div class="w-full bg-gray-700 rounded-full h-3 mt-2 overflow-hidden">
             <div class="skill-bar bg-gradient-to-r from-green-400 to-teal-500 h-3 rounded-full" data-fill="85%"></div>
           </div>
         </div>
         <div>
-          <div class="flex justify-between text-sm"><span>MS Excel</span><span class="text-gray-300">88%</span></div>
+          <div class="flex justify-between text-xs md:text-sm"><span>MS Excel</span><span>88%</span></div>
           <div class="w-full bg-gray-700 rounded-full h-3 mt-2 overflow-hidden">
             <div class="skill-bar bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full" data-fill="88%"></div>
           </div>
         </div>
         <div>
-          <div class="flex justify-between text-sm"><span>ETL (Talend)</span><span class="text-gray-300">80%</span></div>
+          <div class="flex justify-between text-xs md:text-sm"><span>ETL (Talend)</span><span>80%</span></div>
           <div class="w-full bg-gray-700 rounded-full h-3 mt-2 overflow-hidden">
             <div class="skill-bar bg-gradient-to-r from-purple-400 to-pink-500 h-3 rounded-full" data-fill="80%"></div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-6">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-white">MIS Power BI Dashboards</h3>
-        <p class="mt-2 text-gray-300">
-          Developed interactive Management Information System dashboards using Power BI, integrating multiple data sources to 
-          provide actionable insights for decision-making. Worked closely with cross-functional teams to design KPI-driven 
-          reports that enhance operational transparency.
-        </p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-white">MIS Application</h3>
-        <p class="mt-2 text-gray-300">
-          Designed and implemented a MIS application to streamline data entry, automate reporting, and provide quick access 
-          to critical business metrics. Enhanced efficiency by reducing manual processes and ensuring data accuracy across 
-          departments.
-        </p>
-      </div>
-      <article class="glass p-6 rounded-2xl shadow transform transition hover:scale-105">
-        <h3 class="font-semibold text-lg">Sales Performance Dashboard</h3>
-        <p class="text-gray-300 mt-2 text-sm">Power BI dashboard with region-wise KPI, YoY growth, DAX measures and dynamic filters.</p>
-        <div class="mt-3 text-xs text-gray-400">Power BI · SQL · DAX</div>
-      </article>
-      <article class="glass p-6 rounded-2xl shadow transform transition hover:scale-105">
-        <h3 class="font-semibold text-lg">SEO & GA4 Reporting</h3>
-        <p class="text-gray-300 mt-2 text-sm">Consolidated Looker Studio report merging GA4 & Search Console for conversions analysis.</p>
-        <div class="mt-3 text-xs text-gray-400">Looker Studio · GA4</div>
-      </article>
-      <article class="glass p-6 rounded-2xl shadow transform transition hover:scale-105">
-        <h3 class="font-semibold text-lg">ETL Data Pipeline</h3>
-        <p class="text-gray-300 mt-2 text-sm">Talend jobs to ingest, clean and schedule incremental loads for reporting pipelines.</p>
-        <div class="mt-3 text-xs text-gray-400">Talend · SQL</div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Experience Timeline -->
-  <section id="experience" class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-6">Experience</h2>
-    <div class="space-y-6">
-      <div class="glass p-5 rounded-2xl shadow-lg flex gap-4 items-start">
-        <div class="w-3 h-3 rounded-full bg-yellow-400 mt-2"></div>
-        <div>
-          <div class="font-semibold">Data Associate — Ealkay Consulting Pvt Ltd</div>
-          <div class="text-xs text-gray-400">Jan 2025 — Present</div>
-          <p class="mt-2 text-gray-300 text-sm">Working on Power BI dashboards, SQL development, ETL processes and cross-team collaboration to deliver MIS and analytics solutions.</p>
-        </div>
-      </div>
-      <div class="glass p-5 rounded-2xl shadow-lg flex gap-4 items-start">
-        <div class="w-3 h-3 rounded-full bg-gray-400 mt-2"></div>
-        <div>
-          <div class="font-semibold">Data Analyst Intern — Ealkay Consulting (Internship)</div>
-          <div class="text-xs text-gray-400">3 months</div>
-          <p class="mt-2 text-gray-300 text-sm">Built dashboards, automated reports, and supported ETL tasks for client reporting needs.</p>
         </div>
       </div>
     </div>
@@ -214,45 +144,37 @@
   <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
     <h2 class="text-3xl font-bold mb-6">Let's connect</h2>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="glass p-6 rounded-2xl shadow-lg">
+      <div class="glass p-6 rounded-2xl shadow-lg text-sm">
         <h3 class="font-semibold mb-2">Contact Info</h3>
-        <p class="text-gray-300">Email: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400">mohdfardeenbaig@gmail.com</a></p>
-        <p class="text-gray-300">Phone: <a href="tel:+917993523663" class="text-yellow-400">+91 79935 23663</a></p>
-        <p class="text-gray-300">LinkedIn: <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a" target="_blank" class="text-yellow-400">mohd-fardeen-baig-4ba38028a</a></p>
-        <div class="mt-6 flex gap-3">
-          <a href="mailto:mohdfardeenbaig@gmail.com" class="px-4 py-2 bg-yellow-500 text-black rounded shadow">Email me</a>
-          <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a" target="_blank" class="px-4 py-2 border border-gray-700 rounded">LinkedIn</a>
-        </div>
+        <p>Email: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400 break-words">mohdfardeenbaig@gmail.com</a></p>
+        <p>Phone: <a href="tel:+917993523663" class="text-yellow-400">+91 79935 23663</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohd-fardeen-baig-4ba38028a" target="_blank" class="text-yellow-400 break-words">mohd-fardeen-baig-4ba38028a</a></p>
       </div>
 
-      <form class="glass p-6 rounded-2xl shadow-lg" id="contactForm">
+      <form class="glass p-6 rounded-2xl shadow-lg text-sm" id="contactForm">
         <h3 class="font-semibold mb-3">Send a quick message</h3>
-        <label class="block text-sm text-gray-300">Your name</label>
-        <input type="text" id="name" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700" required>
-        <label class="block text-sm text-gray-300 mt-3">Your email</label>
-        <input type="email" id="email" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700" required>
-        <label class="block text-sm text-gray-300 mt-3">Message</label>
-        <textarea id="message" rows="4" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700" required></textarea>
-        <div class="mt-4 flex justify-between items-center">
-          <button type="submit" class="px-4 py-2 bg-yellow-500 text-black rounded font-semibold shadow">Send</button>
-          <div class="text-xs text-gray-400">Or email directly: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400">mohdfardeenbaig@gmail.com</a></div>
+        <label class="block">Your name</label>
+        <input type="text" id="name" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700 text-sm" required>
+        <label class="block mt-3">Your email</label>
+        <input type="email" id="email" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700 text-sm" required>
+        <label class="block mt-3">Message</label>
+        <textarea id="message" rows="4" class="w-full mt-1 p-2 rounded bg-gray-900 border border-gray-700 text-sm" required></textarea>
+        <div class="mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <button type="submit" class="px-4 py-2 bg-yellow-500 text-black rounded font-semibold shadow w-full sm:w-auto">Send</button>
+          <div class="text-xs text-gray-400 break-words">Or email directly: <a href="mailto:mohdfardeenbaig@gmail.com" class="text-yellow-400">mohdfardeenbaig@gmail.com</a></div>
         </div>
       </form>
     </div>
   </section>
 
-  <footer class="text-center text-gray-400 py-8">
+  <footer class="text-center text-gray-400 py-8 text-xs md:text-sm">
     Designed & maintained by <strong class="text-white">Mohd Fardeen Baig</strong> — Data Associate · © 2025
   </footer>
 
   <script>
     new Typed('#typed', {
       strings: ['Data Associate @ Ealkay Consulting', 'Power BI | SQL | ETL', 'Turning Data into Insights'],
-      typeSpeed: 45,
-      backSpeed: 30,
-      backDelay: 2000,
-      startDelay: 500,
-      loop: true
+      typeSpeed: 45, backSpeed: 30, backDelay: 2000, startDelay: 500, loop: true
     });
     const fadeEls = document.querySelectorAll('.card-fade');
     const io = new IntersectionObserver((entries) => {
